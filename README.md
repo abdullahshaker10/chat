@@ -19,5 +19,5 @@ software:
   <li>https://studygyaan.com/django/best-practice-to-structure-django-project-directories-and-files</li>
   <li>https://steelkiwi.com/blog/best-practices-working-django-models-python/</li>
   <li>https://medium.com/python-pandemonium/better-python-dependency-and-package-management-b5d8ea29dff1</li>
-  <li>
+  <li>https://yangsu.github.io/pull-request-tutorial/</li>
 </ul>
