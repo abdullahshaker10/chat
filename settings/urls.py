@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 """chat URL Configuration
+=======
+"""chatapp URL Configuration
+
+>>>>>>> b8a4889b03f74d1318f7c8f3f8a85e83de3ed1bf
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
 Examples:
@@ -15,6 +20,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+<<<<<<< HEAD
 from django.urls import path
 from django.contrib import admin
 from django.conf.urls import url, include
@@ -23,3 +29,8 @@ urlpatterns = [
 
     path('', include('main.urls')),
 ]
+=======
+urlpatterns = [
+    path('admin/', admin.site.urls),
+]
+>>>>>>> b8a4889b03f74d1318f7c8f3f8a85e83de3ed1bf
