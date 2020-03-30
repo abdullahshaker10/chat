@@ -22,10 +22,8 @@ class CustomUserChangeForm(UserChangeForm):
 
 
 class SignUpForm(UserCreationForm):
-    name = forms.CharField(max_length=200)
-    display_name = forms.CharField(max_length=200)
-    Gender = forms.CharField(max_length=200, widget=forms.Select(choices=GENDER_CHOICES))
+    gender = forms.CharField(max_length=200, widget=forms.Select(choices=GENDER_CHOICES))
 
     class Meta(UserCreationForm.Meta):
         model = CustomUser
-        fields = ('name', 'display_name', 'Gender', 'email', 'password1', 'password2')
+        fields = ('name', 'display_name', 'email', 'password1', 'password2', 'gender')
