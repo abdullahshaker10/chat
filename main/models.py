@@ -5,14 +5,18 @@ from django.contrib.auth.models import PermissionsMixin
 from django.utils.translation import gettext_lazy as _
 from django.utils import timezone
 
-
 # Create your models here.
+GENDER_CHOICES = [
+    ('male', 'male'),
+    ('female', 'female'),
+
+]
 
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     name = models.CharField(max_length=200, default=None, null=True)
     display_name = models.CharField(max_length=200, default=None, null=True)
-    gender = models.CharField(max_length=200, default=None, null=True)
+    gender = models.CharField(max_length=200, default=None, null=True, choices=GENDER_CHOICES)
 
     email = models.EmailField(_('email address'), unique=True)
     is_staff = models.BooleanField(default=False)

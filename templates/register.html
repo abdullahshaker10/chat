@@ -1,5 +1,5 @@
 {% extends "index.html" %}
-
+{% load crispy_forms_tags %}
 {% block content %}
     <div class="container">
         <form  method="post">
@@ -11,58 +11,25 @@
                         {% if error_message %}
                             <p class="bg-danger p-d ml-b">{{ error_message }}</p>
                         {% endif %}
+                     <div class="col-md-6 col-md-offset-4">
+                            {{form|crispy}}
+                     </div>
 
-                        <div class="form-group clearfix">
-                            <label for="{{ form.name.id_for_label }}" class="col-md-4 control-label text-right">Username<span class="text-red">*</span>:</label>
-                            <div class="col-md-6">
-                                {{ form.name }}
-                            </div>
-                        </div>
-                        <div class="form-group clearfix">
-                            <label for="{{ form.display_name.id_for_label }}" class="col-md-4 control-label text-right">Display Name<span class="text-red">*</span>:</label>
-                            <div class="col-md-6">
-                                {{ form.display_name }}
-                            </div>
-                        </div>
-                        <div class="form-group clearfix">
-                            <label for="{{ form.email.id_for_label }}" class="col-md-4 control-label text-right">Email<span class="text-red">*</span>:</label>
-                            <div class="col-md-6">
-                                {{ form.email }}
-                            </div>
-                        </div>
 
-                        <div class="form-group clearfix">
-                            <label for="{{ form.password1.id_for_label }}" class="col-md-4 control-label text-right">Password<span class="text-red">*</span>:</label>
-                            <div class="col-md-6">
-                                {{ form.password1 }}
-                            </div>
-                        </div>
-                        <div class="form-group clearfix">
-                            <label for="{{ form.password2.id_for_label }}" class="col-md-4 control-label text-right">Confirm password:</label>
-                            <div class="col-md-6">
-                                {{ form.password2 }}
-                            </div>
-                        </div>
-                         <div class="form-group clearfix">
-                            <label for="{{ form.Gender.id_for_label }}" class="col-md-4 control-label text-right">Gender:</label>
-                            <div class="col-md-6">
-                                {{ form.gender }}
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-md-offset-4">
-                            <input type="submit" value="Register" class="btn btn-success">
-                        </div>
-                    </div>
+                     <div class="col-md-6 col-md-offset-4">
+                          <input type="submit" value="SignUp" class="btn btn-success">
+                     </div>
+
+              </div>
                 </div>
                 <div class="border-top pt-3">
                   <small class="text-muted">
-                    Have An Account?<a class="ml-2" href="{% url 'login' %}">Sign In</a>
+                     Have An Account?<a class="ml-2" href="{% url 'login' %}">Log In</a>
 
                   </small>
                 </div>
             </div>
-
-        </form>
+</form>
 
     </div>
 {% endblock %}

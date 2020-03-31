@@ -23,4 +23,4 @@ class Home(TemplateView):
 
 
 class LogoutView(LogoutView):
-    template_name = 'logput.html'
+    template_name = 'logout.html'
