@@ -5,11 +5,11 @@ from django.contrib.auth.models import PermissionsMixin
 from django.utils.translation import gettext_lazy as _
 from django.utils import timezone
 
-# Create your models here.
+GENDER_MALE = 'male'
+GENDER_FEMALE = 'female'
 GENDER_CHOICES = [
-    ('male', 'male'),
-    ('female', 'female'),
-
+    (GENDER_MALE, 'male'),
+    (GENDER_FEMALE, 'female'),
 ]
 
 
